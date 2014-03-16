@@ -30,6 +30,31 @@ int from_string(std::string input)
     return value;
 }
 
+template<typename T>
+bool is_prime(T number)
+{
+    if (number < 2) { return false; }
+    if (number == 2) { return true; }
+    if (number % 2 == 0) { return false; }
+    for (T i = 2; i <= sqrt(number) + 1; i++)
+    {
+        if (number % i == 0) { return false; }
+    }
+    return true;
+}
+
+template <typename T>
+bool is_even(T value)
+{
+    return value % 2 == 0;
+}
+
+template <typename T>
+bool is_neven(T value)
+{
+    return !is_even(value);
+}
+
 template <typename T>
 std::vector<T> generate_range(T min, T max)
 {
