@@ -17,7 +17,10 @@ SOURCES += \
     Problem8_LargestProductInSeries.cpp \
     Problem9_SpecialPythagoreanTriplet.cpp \
     Problem10_SummationOfPrimes.cpp \
-    Problem12_HighlyDivisibleTriangular.cpp
+    Problem12_HighlyDivisibleTriangular.cpp \
+    Problem11_LargestProductInGrid.cpp \
+    Problem13_LargeSum.cpp \
+    Problem14_LargestCollatzSequence.cpp
 
 HEADERS += \
     Utility.h \

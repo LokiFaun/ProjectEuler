@@ -1,14 +1,14 @@
 #include "ProjectEuler.h"
 #include <cmath>
 
-int Problem_9_SpecialPythagoreanTriplet()
+long long Problem_9_SpecialPythagoreanTriplet()
 {
-    int s = 1000;
-    for (int a = 1; a < s / 3; a++)
+    long long s = 1000;
+    for (long long a = 1; a < s / 3; a++)
     {
-        for (int b = 1; b < s / 2; b++)
+        for (long long b = 1; b < s / 2; b++)
         {
-            const int c = s - a - b;
+            const long long c = s - a - b;
             if (pow(a, 2) + pow(b, 2) == pow(c, 2))
             {
                 return a * b * c;

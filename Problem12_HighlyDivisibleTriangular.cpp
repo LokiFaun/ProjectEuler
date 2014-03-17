@@ -1,37 +1,31 @@
 #include "ProjectEuler.h"
 #include "Utility.h"
 
-long long CreateTriangular(long long number)
+long long GetNumberDivisors(long long number)
 {
-    long long triangular = 0;
-    for (long long i = 1; i <= number; i++)
+    long long counter = 0;
+    for (long long j = 1; j < sqrt(number); j++)
     {
-        triangular += i;
-    }
-    return triangular;
-}
-
-std::vector<long long> GetDivisors(long long number)
-{
-    std::vector<long long> divisors;
-    for (long long i = 1; i < number / 2; i++)
-    {
-        if (number % i == 0)
+        if (number % j == 0)
         {
-            divisors.push_back(i);
+            counter += 2;
+        }
+        if (pow(sqrt(number), 2) == number)
+        {
+            counter--;
         }
     }
-    return divisors;
+    return counter;
 }
 
 long long Problem_12_HighlyDivisibleTriangularNumber()
 {
-    const size_t nrDivisors = 5;
+    const size_t nrDivisors = 500;
     for (long long i = 1;; i++)
     {
-        const long long triangular = CreateTriangular(i);
-        const std::vector<long long> divisors = GetDivisors(triangular);
-        if (divisors.size() == nrDivisors)
+        std::vector<long long> numbers = generate_range(0LL, i);
+        const long long triangular = std::accumulate(std::begin(numbers), std::end(numbers), 0);
+        if (GetNumberDivisors(triangular) >= nrDivisors)
         {
             return triangular;
         }

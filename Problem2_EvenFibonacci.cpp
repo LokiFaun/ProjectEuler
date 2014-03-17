@@ -3,10 +3,10 @@
 #include <vector>
 #include <algorithm>
 
-int Problem_2_EvenFibonacci()
+long long Problem_2_EvenFibonacci()
 {
     const int maxValue = 4000000;
-    int sum = 0;
+    long long sum = 0;
     std::vector<int> numbers;
     numbers.push_back(0);
     numbers.push_back(1);

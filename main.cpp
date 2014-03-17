@@ -34,8 +34,17 @@ int main()
 //    std::cout << "Problem 10: Summation of primes" << std::endl;
 //    std::cout << "Solution: " << Problem_10_SummationOfPrimes() << std::endl;
 
-    std::cout << "Problem 12: Highly divisible triangular number" << std::endl;
-    std::cout << "Solution: " << Problem_12_HighlyDivisibleTriangularNumber() << std::endl;
+//    std::cout << "Problem 11: Largest product in a grid" << std::endl;
+//    std::cout << "Solution: " << Problem_11_LargestProductInGrid() << std::endl;
+
+//    std::cout << "Problem 12: Highly divisible triangular number" << std::endl;
+//    std::cout << "Solution: " << Problem_12_HighlyDivisibleTriangularNumber() << std::endl;
+
+    std::cout << "Problem 13: Large sum" << std::endl;
+    std::cout << "Solution: " << Problem_13_LargeSum() << std::endl;
+
+//    std::cout << "Problem 14: Largest collatz sequence" << std::endl;
+//    std::cout << "Solution: " << Problem_14_LargestCollatzSequence() << std::endl;
 
     return 0;
 }
